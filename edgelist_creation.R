@@ -14,6 +14,8 @@ co_occur_pairs<-function(dataset){
 for(t in 1:length(trts)){
 	#t<-1
 	dataset_trt<-subset(dataset, trt==trts[t])
+	dataset_trt$ab1 <- as.numeric(levels(dataset_trt$ab1))[dataset_trt$ab1]
+	dataset_trt$ab2 <- as.numeric(levels(dataset_trt$ab2))[dataset_trt$ab2]
 	dataset_trt_no0<-subset(dataset_trt, ab1 > 0 & ab2 > 0)
 	
 	dataset_trt_no0$pairs<-paste(dataset_trt_no0$taxa1,dataset_trt_no0$taxa2)
