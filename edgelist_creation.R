@@ -16,7 +16,7 @@ for(t in 1:length(trts)){
 	dataset_trt<-subset(dataset, trt==trts[t])
 	dataset_trt$ab1 <- as.numeric(levels(dataset_trt$ab1))[dataset_trt$ab1]
 	dataset_trt$ab2 <- as.numeric(levels(dataset_trt$ab2))[dataset_trt$ab2]
-	dataset_trt$rho <- as.numeric(dataset_trt$rho)
+	dataset_trt$rho <- as.numeric(levels(dataset_trt$rho))[dataset_trt$rho]
 	dataset_trt_no0<-subset(dataset_trt, ab1 > 0 & ab2 > 0)
 	
 	dataset_trt_no0$pairs<-paste(dataset_trt_no0$taxa1,dataset_trt_no0$taxa2)
@@ -39,7 +39,7 @@ for(r in 1:4){
 	edge_list_pvals$qval<-fdrtool(edge_list_pvals$p.value, statistic="pvalue",plot=FALSE,verbose=FALSE)$qval
 	as.matrix(names(edge_list_pvals))
 	
-	final.results<-rbind(final.results,edge_list_pvals[,-c(2:3)])	}
+f	}
 }
 	print(t/length(trts))
 }
