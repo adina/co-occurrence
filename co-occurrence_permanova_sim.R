@@ -119,7 +119,7 @@ head(community)
 ?geom_smooth()
 ggplot(community)+theme_bw()+facet_wrap(~Ecosystem,scales="free")+geom_smooth(aes(x=X4,y=X6,colour=Ecosystem,size=.5),se=FALSE)+theme(aspect.ratio=1)+geom_point(aes(x=X4,y=X6,colour=Ecosystem),size=3,alpha=0.5)+theme(axis.text.x=element_text(size=15),axis.text.y=element_text(size=15),axis.title.x=element_text(size=15),axis.title.y=element_text(size=15))+theme(legend.title=element_text(size=15),legend.text=element_text(size=15))+scale_colour_manual(values=c("red","blue"))+labs(x="Microbe 4",y="Microbe 6")
 
-
+#Possible missing function here for ggplot.NMDS
 mds<-monoMDS(cocur.dist)
 head(cocur)
 plot(mds)
