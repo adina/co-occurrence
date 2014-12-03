@@ -35,7 +35,7 @@ for(r in 1:4){
 	
 	edge_list_pvals$rho_cut<-rhos[r]
 	edge_list_pvals$trt<-trts[t]
-	
+	#edge_list_pvals$p.value <- as.numeric(levels(edge_list_pvals$p.value))[edge_list_pvals$p.value]
 	edge_list_pvals$qval<-fdrtool(edge_list_pvals$p.value, statistic="pvalue",plot=FALSE,verbose=FALSE)$qval
 	as.matrix(names(edge_list_pvals))
 	
