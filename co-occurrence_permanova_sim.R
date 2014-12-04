@@ -1,5 +1,5 @@
 #Here is the code for figure 1#
-
+#adina was here
 #simulating 6 species. Species 1-3 are correlated from ecosystem A and species 4-6 are correlated from ecosystem B (different co-occurrence).  Composition will be different in each
 
 
